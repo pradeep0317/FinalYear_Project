@@ -1,0 +1,5 @@
+E:/FinalYear_Project/UzumakiAR/UzumakiAR/.utmp/RelWithDebInfo/96u1ao35/arm64-v8a/CMakeFiles/edit_cache.dir
+E:/FinalYear_Project/UzumakiAR/UzumakiAR/.utmp/RelWithDebInfo/96u1ao35/arm64-v8a/CMakeFiles/rebuild_cache.dir
+E:/FinalYear_Project/UzumakiAR/UzumakiAR/.utmp/RelWithDebInfo/96u1ao35/arm64-v8a/GameActivity/CMakeFiles/game.dir
+E:/FinalYear_Project/UzumakiAR/UzumakiAR/.utmp/RelWithDebInfo/96u1ao35/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+E:/FinalYear_Project/UzumakiAR/UzumakiAR/.utmp/RelWithDebInfo/96u1ao35/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
