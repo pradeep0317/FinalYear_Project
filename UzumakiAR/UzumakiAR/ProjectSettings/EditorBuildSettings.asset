@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Uzumaki_AR/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Uzumaki_AR/Scenes/ImageTargetScene.unity
     guid: fefc0ae86911c154da195a540721198c
+  - enabled: 1
+    path: Assets/Uzumaki_AR/Scenes/ARCoreScene.unity
+    guid: 6cd1072352a2ac048a8d0d55e8cb670c
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8623b2cf5774ebd489720cee61f7826d, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 2846062fe2588ea41aa9aed9ca66c2ee, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2d3080b959b09514ca59ff1a67f0ee39, type: 2}
   m_UseUCBPForAssetBundles: 0
