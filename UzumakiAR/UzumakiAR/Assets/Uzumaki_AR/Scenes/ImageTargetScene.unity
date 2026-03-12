@@ -560,6 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirebaseReader
   dataText: {fileID: 1999775739}
   timeText: {fileID: 1814395939}
+  dateText: {fileID: 1889622751}
 --- !u!1 &1621304159
 GameObject:
   m_ObjectHideFlags: 0

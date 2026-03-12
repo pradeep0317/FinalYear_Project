@@ -9,8 +9,9 @@ public class FirebaseReader : MonoBehaviour
 {
     DatabaseReference reference;
 
-    public TMP_Text dataText;     // Center data (Temperature, Voltage etc)
-    public TMP_Text timeText;     // Corner time text
+    public TMP_Text dataText;     
+    public TMP_Text timeText;     
+    public TMP_Text dateText;     // NEW date text
 
     string temperature;
     string voltage;
@@ -20,6 +21,7 @@ public class FirebaseReader : MonoBehaviour
     string frequency;
     string powerfactor;
     string time;
+    string date;                  // NEW date variable
 
     void Start()
     {
@@ -57,8 +59,10 @@ public class FirebaseReader : MonoBehaviour
             frequency = args.Snapshot.Child("frequency").Value.ToString();
             powerfactor = args.Snapshot.Child("powerfactor").Value.ToString();
             time = args.Snapshot.Child("time").Value.ToString();
+            date = args.Snapshot.Child("date").Value.ToString();   // NEW
 
             timeText.text = "Time : " + time;
+            dateText.text = "Date : " + date;   // NEW
 
             StopAllCoroutines();
             StartCoroutine(ShowData());
