@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "503325979032",
+    "firebase_url": "https://fan-ar-datafetch-default-rtdb.firebaseio.com",
+    "project_id": "fan-ar-datafetch",
+    "storage_bucket": "fan-ar-datafetch.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503325979032:android:dd858e1853b90bcba6fbed",
+        "android_client_info": {
+          "package_name": "com.Uzumaki_AR.UzumakiAR"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8TVZbA0-7TBG4wruzY_zRNeFL5LGaz74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
