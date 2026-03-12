@@ -3,13 +3,23 @@ using Firebase;
 using Firebase.Database;
 using Firebase.Extensions;
 using TMPro;
+using System.Collections;
 
 public class FirebaseReader : MonoBehaviour
 {
     DatabaseReference reference;
 
-    public TMP_Text temperatureText;
-    public TMP_Text timeText;
+    public TMP_Text dataText;     // Center data (Temperature, Voltage etc)
+    public TMP_Text timeText;     // Corner time text
+
+    string temperature;
+    string voltage;
+    string current;
+    string power;
+    string energy;
+    string frequency;
+    string powerfactor;
+    string time;
 
     void Start()
     {
@@ -39,11 +49,46 @@ public class FirebaseReader : MonoBehaviour
 
         if (args.Snapshot.Exists)
         {
-            string temperature = args.Snapshot.Child("temperature").Value.ToString();
-            string time = args.Snapshot.Child("time").Value.ToString();
+            temperature = args.Snapshot.Child("temperature").Value.ToString();
+            voltage = args.Snapshot.Child("voltage").Value.ToString();
+            current = args.Snapshot.Child("current").Value.ToString();
+            power = args.Snapshot.Child("power").Value.ToString();
+            energy = args.Snapshot.Child("energy").Value.ToString();
+            frequency = args.Snapshot.Child("frequency").Value.ToString();
+            powerfactor = args.Snapshot.Child("powerfactor").Value.ToString();
+            time = args.Snapshot.Child("time").Value.ToString();
 
-            temperatureText.text = "Temperature : " + temperature + " °C";
             timeText.text = "Time : " + time;
+
+            StopAllCoroutines();
+            StartCoroutine(ShowData());
+        }
+    }
+
+    IEnumerator ShowData()
+    {
+        while (true)
+        {
+            dataText.text = "Temperature : " + temperature + " °C";
+            yield return new WaitForSeconds(5);
+
+            dataText.text = "Voltage : " + voltage + " V";
+            yield return new WaitForSeconds(5);
+
+            dataText.text = "Current : " + current + " A";
+            yield return new WaitForSeconds(5);
+
+            dataText.text = "Power : " + power + " W";
+            yield return new WaitForSeconds(5);
+
+            dataText.text = "Energy : " + energy + " kWh";
+            yield return new WaitForSeconds(5);
+
+            dataText.text = "Frequency : " + frequency + " Hz";
+            yield return new WaitForSeconds(5);
+
+            dataText.text = "Power Factor : " + powerfactor;
+            yield return new WaitForSeconds(5);
         }
     }
 }
