@@ -1,7 +1,5 @@
 using UnityEngine;
-using Firebase;
 using Firebase.Database;
-using Firebase.Extensions;
 using TMPro;
 using System.Collections;
 
@@ -9,9 +7,9 @@ public class FirebaseReader : MonoBehaviour
 {
     DatabaseReference reference;
 
-    public TMP_Text dataText;     
-    public TMP_Text timeText;     
-    public TMP_Text dateText;     // NEW date text
+    public TMP_Text dataText;
+    public TMP_Text timeText;
+    public TMP_Text dateText;
 
     string temperature;
     string voltage;
@@ -21,24 +19,16 @@ public class FirebaseReader : MonoBehaviour
     string frequency;
     string powerfactor;
     string time;
-    string date;                  // NEW date variable
+    string date;
+
+    bool coroutineStarted = false;
 
     void Start()
     {
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
-        {
-            FirebaseApp app = FirebaseApp.DefaultInstance;
-            reference = FirebaseDatabase.DefaultInstance.RootReference;
+        reference = FirebaseManager.Instance.GetReference("fan1/latest");
+        reference.ValueChanged += HandleValueChanged;
 
-            ListenForData();
-        });
-    }
-
-    void ListenForData()
-    {
-        FirebaseDatabase.DefaultInstance
-        .GetReference("fan1/latest")
-        .ValueChanged += HandleValueChanged;
+        StartCoroutine(ShowData()); // start once
     }
 
     void HandleValueChanged(object sender, ValueChangedEventArgs args)
@@ -59,13 +49,10 @@ public class FirebaseReader : MonoBehaviour
             frequency = args.Snapshot.Child("frequency").Value.ToString();
             powerfactor = args.Snapshot.Child("powerfactor").Value.ToString();
             time = args.Snapshot.Child("time").Value.ToString();
-            date = args.Snapshot.Child("date").Value.ToString();   // NEW
+            date = args.Snapshot.Child("date").Value.ToString();
 
             timeText.text = "Time : " + time;
-            dateText.text = "Date : " + date;   // NEW
-
-            StopAllCoroutines();
-            StartCoroutine(ShowData());
+            dateText.text = "Date : " + date;
         }
     }
 
@@ -74,25 +61,33 @@ public class FirebaseReader : MonoBehaviour
         while (true)
         {
             dataText.text = "Temperature : " + temperature + " °C";
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(2);
 
             dataText.text = "Voltage : " + voltage + " V";
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(2);
 
             dataText.text = "Current : " + current + " A";
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(2);
 
             dataText.text = "Power : " + power + " W";
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(2);
 
             dataText.text = "Energy : " + energy + " kWh";
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(2);
 
             dataText.text = "Frequency : " + frequency + " Hz";
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(2);
 
             dataText.text = "Power Factor : " + powerfactor;
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(2);
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (reference != null)
+        {
+            reference.ValueChanged -= HandleValueChanged;
         }
     }
 }
