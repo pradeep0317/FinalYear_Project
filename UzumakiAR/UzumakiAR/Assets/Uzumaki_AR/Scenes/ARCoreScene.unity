@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 1855365285}
   - component: {fileID: 1855365284}
   - component: {fileID: 1855365283}
+  - component: {fileID: 1855365286}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -652,52 +653,19 @@ MonoBehaviour:
   m_CameraFloorOffsetObject: {fileID: 80053972}
   m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
---- !u!1 &1903702530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1903702532}
-  - component: {fileID: 1903702531}
-  m_Layer: 0
-  m_Name: ARConttoller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1903702531
+--- !u!114 &1855365286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903702530}
+  m_GameObject: {fileID: 1855365281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040ad6925361a6242b0b7e8e2344fecc, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f26c8ee76d12ce48afce8fdcff1c47f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ARObjectPlacement
-  objectPrefab: {fileID: 5401025799868106084, guid: 31844d30778e01a499cdd6241ab75b3e, type: 3}
-  raycastManager: {fileID: 1855365284}
---- !u!4 &1903702532
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903702530}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.12967, y: 0, z: 16.03796}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnOnPlaneTouch
+  spawnPrefab: {fileID: 2403490898145734064, guid: 31844d30778e01a499cdd6241ab75b3e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -705,4 +673,3 @@ SceneRoots:
   - {fileID: 1747539026}
   - {fileID: 784446456}
   - {fileID: 1855365282}
-  - {fileID: 1903702532}
