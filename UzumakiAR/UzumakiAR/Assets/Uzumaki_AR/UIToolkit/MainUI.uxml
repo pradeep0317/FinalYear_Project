@@ -1,0 +1,168 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Uzumaki_AR/UIToolkit/CSS/HomeUI.uss?fileID=7433441132597879392&amp;guid=85aa0fea47e0e2548ae0cc0593efdb85&amp;type=3#HomeUI"/>
+    <ui:VisualElement name="HomeScreen" style="flex-grow: 1; position: absolute; width: 1080px; height: 2392px; color: rgb(18, 18, 18); background-color: rgb(18, 18, 18); display: none;">
+        <ui:Image name="Logo" source="project://database/Assets/Uzumaki_AR/Sprites/Gemini_Generated_Image_2wtzgy2wtzgy2wtz-removebg-preview.png?fileID=2800000&amp;guid=09f47ae47b41375469428c33412d8353&amp;type=3#Gemini_Generated_Image_2wtzgy2wtzgy2wtz-removebg-preview" style="height: 368px; width: 444px; top: auto; left: auto; align-items: center; align-self: center; bottom: -51px;"/>
+        <ui:Label text="Predictive Maintenance System" name="TiTle1" style="-unity-font-style: bold; font-size: 55px; color: rgb(255, 255, 255); -unity-text-align: upper-center; bottom: -519px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;);"/>
+        <ui:Label text="Industrial Monitoring &amp; AR" name="TiTle2" style="-unity-font-style: bold; font-size: 55px; color: rgb(255, 255, 255); -unity-text-align: upper-center; bottom: -520px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;);"/>
+        <ui:Button text="View&#10;Machines" name="ViewMachine" class="view-machine-button" style="bottom: -1080px; width: 782px; align-items: center; align-self: center; height: 138px; font-size: 50px; -unity-font-style: normal; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 28px; border-top-right-radius: 28px; border-bottom-right-radius: 28px; border-bottom-left-radius: 28px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); background-color: rgb(58, 122, 254);"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="MachineListUI" style="flex-grow: 1; width: 1080px; height: 2392px; background-color: rgb(18, 18, 18); display: flex;">
+        <ui:VisualElement name="TopHeader" style="flex-grow: 1; display: flex; position: absolute; height: 122px; width: 1080px;">
+            <ui:Button text="" name="BackButton" icon-image="project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=5923138177525885446&amp;guid=aafb8ba89d15eee43985a7425aaf95a2&amp;type=3#arrow-left" triple-click-selects-line="false" selectable="false" focusable="false" style="position: absolute; height: 110px; width: 126px; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1008301579157283121&amp;guid=aafb8ba89d15eee43985a7425aaf95a2&amp;type=3#arrow-left@2x&quot;); background-color: rgba(188, 188, 188, 0); border-top-left-radius: 39px; border-top-right-radius: 39px; border-bottom-right-radius: 39px; border-bottom-left-radius: 39px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"/>
+            <ui:VisualElement name="DateTimePanel" style="flex-grow: 1; width: 464px; position: absolute; height: 95px; top: 0; left: 600px;">
+                <ui:Label text="" name="DateAndTime" style="height: 55px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label text="Machine List" name="MachineList" style="-unity-font-style: bold; font-size: 100px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); color: rgb(255, 255, 255); position: absolute; top: 124px; left: 28px;"/>
+        <ui:VisualElement name="LisitingPanel" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0.7); align-items: center; align-self: auto; position: absolute; width: 1072px; height: 2084px; top: 304px; border-top-left-radius: 100px; border-top-right-radius: 100px; left: 0;">
+            <ui:VisualElement name="MachinePanel" style="flex-grow: 1; align-items: auto; width: 973px; height: 358px; position: absolute; top: 168px; left: 57px; background-color: rgb(255, 255, 255); border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
+                <ui:Label text="TABLE FAN-1" name="MachineName" style="position: absolute; top: 49px; left: 506px; -unity-font-style: bold; font-size: 50px; -unity-text-align: upper-center; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;);"/>
+                <ui:Label text="Status:" name="Status" style="font-size: 40px; -unity-font-style: bold; position: absolute; top: 209px; left: 569px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;);"/>
+                <ui:Label text="TF-0317" name="MNTxt" style="font-size: 30px; -unity-font-style: normal; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); position: absolute; top: 149px; left: 729px;"/>
+                <ui:Label text="Model Number:" name="ModeNumber" style="-unity-font-style: bold; font-size: 40px; position: absolute; top: 143px; left: 401px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;);"/>
+                <ui:Label text="Running" name="StatusTxt" style="-unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); -unity-font-style: normal; font-size: 30px; position: absolute; top: 216px; left: 732px;"/>
+                <ui:Button text="" name="MachineimageButton" icon-image="" triple-click-selects-line="false" style="height: 284px; position: absolute; width: 301px; top: 34px; left: 38px; background-image: url(&quot;project://database/Assets/Uzumaki_AR/Sprites/cccc8fc6e84c418897fcec1f404ae30c.jpeg?fileID=21300000&amp;guid=2fd411327754c1a42b0b562f10f0f305&amp;type=3#cccc8fc6e84c418897fcec1f404ae30c&quot;); border-top-left-radius: 48px; border-top-right-radius: 48px; border-bottom-right-radius: 48px; border-bottom-left-radius: 48px; -unity-text-auto-size: none;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="MachineDetails" style="flex-grow: 1; width: 1080px; height: 2392px; background-color: rgb(18, 18, 18); display: none;">
+        <ui:VisualElement name="TopHeader" style="flex-grow: 1; display: flex; position: absolute; height: 122px; width: 1080px;">
+            <ui:Button text="" name="BackButton" icon-image="project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=5923138177525885446&amp;guid=aafb8ba89d15eee43985a7425aaf95a2&amp;type=3#arrow-left" triple-click-selects-line="false" selectable="false" focusable="false" style="position: absolute; height: 110px; width: 126px; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1008301579157283121&amp;guid=aafb8ba89d15eee43985a7425aaf95a2&amp;type=3#arrow-left@2x&quot;); background-color: rgba(188, 188, 188, 0); border-top-left-radius: 39px; border-top-right-radius: 39px; border-bottom-right-radius: 39px; border-bottom-left-radius: 39px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"/>
+            <ui:VisualElement name="DateTimePanel" style="flex-grow: 1; width: 464px; position: absolute; height: 95px; top: 0; left: 600px;">
+                <ui:Label text="" name="DateAndTime" style="height: 55px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label text="MachineDetails" name="MachineDetailsTxt" style="position: absolute; font-size: 80px; -unity-font-style: normal; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); color: rgb(255, 255, 255); top: 155px; left: 30px;"/>
+        <ui:Image name="Image" source="project://database/Assets/Uzumaki_AR/Sprites/cccc8fc6e84c418897fcec1f404ae30c.jpeg?fileID=21300000&amp;guid=2fd411327754c1a42b0b562f10f0f305&amp;type=3#cccc8fc6e84c418897fcec1f404ae30c" scale-mode="ScaleAndCrop" style="position: absolute; height: 440px; width: 368px; top: 364px; left: 44px; border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px; border-top-left-radius: 22px; border-top-right-radius: 22px; border-bottom-right-radius: 22px; border-bottom-left-radius: 22px; -unity-slice-type: tiled;"/>
+        <ui:Label text="TABLE FAN" name="MasterTitle" style="position: absolute; font-size: 80px; -unity-font-style: normal; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); color: rgb(255, 255, 255); top: 939px; left: 334px; -unity-text-align: upper-center; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px;"/>
+        <ui:VisualElement name="ButtonHolder" style="flex-grow: 1; position: absolute; height: 532px; width: 520px; top: 340px; left: 524px;">
+            <ui:Button text="Log" name="LogButton" style="align-self: auto; align-items: auto; height: 92px; position: absolute; width: 511px; top: 27px; left: 2px; -unity-font-style: normal; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); font-size: 30px; background-color: rgb(123, 123, 123); border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;"/>
+            <ui:Button text="Analytics" name="AnalyticsButton" style="align-self: auto; top: 197px; height: 92px; position: absolute; width: 516px; left: 0; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); -unity-font-style: normal; font-size: 30px; background-color: rgb(139, 92, 246); border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;"/>
+            <ui:Button text="LiveData" name="LIveDataViewButton" style="flex-direction: column; align-items: flex-start; align-self: auto; align-content: flex-start; top: 360px; height: 92px; position: absolute; width: 516px; left: 0; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&quot;); -unity-font-style: normal; font-size: 30px; background-color: rgb(58, 122, 254); border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="MachineDetailsTab" style="flex-grow: 1; position: absolute; height: 1127px; width: 1080px; top: 1154px; left: 0; background-color: rgb(18, 18, 18); border-top-left-radius: 54px; border-top-right-radius: 54px; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);">
+            <ui:ScrollView style="flex-grow: 1; padding: 24px;">
+                <ui:VisualElement name="DetailsCard" style="width: 100%; background-color: rgb(30, 30, 30); border-radius: 20px; padding: 24px;">
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Asset Name" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="Table Fan" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Model Name" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="TN-GOV-TF300" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Manufacturer" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="Khaitan Electricals Ltd." style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Manufacturing Date" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="15/06/2022" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Installed Date" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="10/08/2022" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Motor Type" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="Single Phase Induction Motor" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Power Rating" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="60 Watts" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Voltage Rating" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="220–240 V AC" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Blade Size" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="300 mm (12 inch)" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Number of Blades" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="3" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Speed Levels" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="3 Speed Control" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Rated Frequency" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="50 Hz" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Current Rating" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="0.28 A" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Body Material" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="ABS Plastic" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 14px;">
+                        <ui:Label text="Weight" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="2.8 kg" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+                        <ui:Label text="Serial Number" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                        <ui:Label text="TNFAN2022-45891" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="LogUI" style="flex-grow: 1; width: 1080px; height: 2392px; background-color: rgb(18, 18, 18); display: none;">
+        <ui:VisualElement name="TopHeader" style="flex-grow: 1; display: flex; position: absolute; height: 122px; width: 1080px;">
+            <ui:Button text="" name="BackButton" icon-image="project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=5923138177525885446&amp;guid=aafb8ba89d15eee43985a7425aaf95a2&amp;type=3#arrow-left" triple-click-selects-line="false" selectable="false" focusable="false" style="position: absolute; height: 110px; width: 126px; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1008301579157283121&amp;guid=aafb8ba89d15eee43985a7425aaf95a2&amp;type=3#arrow-left@2x&quot;); background-color: rgba(188, 188, 188, 0); border-top-left-radius: 39px; border-top-right-radius: 39px; border-bottom-right-radius: 39px; border-bottom-left-radius: 39px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"/>
+            <ui:VisualElement name="DateTimePanel" style="flex-grow: 1; width: 464px; position: absolute; height: 95px; top: 0; left: 600px;">
+                <ui:Label text="" name="DateAndTime" style="height: 55px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label text="Machine Logs" style="font-size: 60px; color: white; margin-top: 120px; margin-left: 30px; -unity-font-style: bold;"/>
+        <ui:ScrollView name="LogList" style="flex-grow: 1; margin-top: 40px; padding: 20px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="AnalyticsUI" style="flex-grow: 1; width: 1080px; height: 2392px; background-color: rgb(18, 18, 18); display: none;">
+        <ui:Label text="Analytics" style="font-size: 70px; color: white; margin-top: 120px; margin-left: 30px; -unity-font-style: bold;"/>
+        <ui:VisualElement style="flex-grow: 1; align-items: center; margin-top: 60px;">
+            <ui:VisualElement name="GaugeContainer" style="align-items: center; margin-top: 60px;">
+                <ui:Label text="Machine Health" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                <ui:VisualElement name="GaugeBar" style="flex-direction: row; margin-top: 20px;">
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                    <ui:VisualElement class="segment"/>
+                </ui:VisualElement>
+                <ui:Label text="72%" name="HealthText" style="color: white; font-size: 50px; margin-top: 20px; -unity-font-style: bold;"/>
+            </ui:VisualElement>
+            <ui:VisualElement style="height: 40px;"/>
+            <ui:VisualElement style="width: 900px; background-color: rgb(30, 30, 30); border-radius: 16px; padding: 20px;">
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 16px;">
+                    <ui:Label text="Status" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                    <ui:Label text="GOOD" name="StatusLabel" style="color: rgb(0, 255, 136); font-size: 30px; -unity-font-style: bold;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; margin-bottom: 16px;">
+                    <ui:Label text="Anomaly" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                    <ui:Label text="Normal" name="AnomalyLabel" style="color: rgb(0, 255, 136); font-size: 30px; -unity-font-style: bold;"/>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+                    <ui:Label text="Fault Type" style="color: rgb(170, 170, 170); font-size: 28px;"/>
+                    <ui:Label text="None" name="FaultLabel" style="color: white; font-size: 30px; -unity-font-style: bold;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="height: 40px;"/>
+            <ui:Button text="View Full Analytics" name="OpenWebAnalytics" style="width: 600px; height: 100px; background-color: rgb(139, 92, 246); color: white; font-size: 32px; border-radius: 20px; -unity-font-style: bold;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="TopHeader" style="flex-grow: 1; display: flex; position: absolute; height: 122px; width: 1080px;">
+            <ui:Button text="" name="BackButton" icon-image="project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=5923138177525885446&amp;guid=aafb8ba89d15eee43985a7425aaf95a2&amp;type=3#arrow-left" triple-click-selects-line="false" selectable="false" focusable="false" style="position: absolute; height: 110px; width: 126px; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1008301579157283121&amp;guid=aafb8ba89d15eee43985a7425aaf95a2&amp;type=3#arrow-left@2x&quot;); background-color: rgba(188, 188, 188, 0); border-top-left-radius: 39px; border-top-right-radius: 39px; border-bottom-right-radius: 39px; border-bottom-left-radius: 39px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"/>
+            <ui:VisualElement name="DateTimePanel" style="flex-grow: 1; width: 464px; position: absolute; height: 95px; top: 0; left: 600px;">
+                <ui:Label text="" name="DateAndTime" style="height: 55px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

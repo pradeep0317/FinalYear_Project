@@ -1,0 +1,20 @@
+:root {
+
+}
+.view-machine-button{
+    
+}
+.view-machine-button:hover{
+    background-color: #5A8CFF;
+}
+.view-machine-button:active{
+    background-color: #00ff09;
+}
+.segment {
+    width: 40px;
+    height: 120px;
+    margin-right: 6px;
+    background-color: #2A2A2A;
+    border-radius: 6px;
+}
+
