@@ -266,6 +266,8 @@ GameObject:
   m_Component:
   - component: {fileID: 222187263}
   - component: {fileID: 222187262}
+  - component: {fileID: 222187265}
+  - component: {fileID: 222187264}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -311,6 +313,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &222187264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222187261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac92cfc0b970d24f9215be44b90cbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToolkitGauge
+  uiDoc: {fileID: 222187262}
+--- !u!114 &222187265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222187261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25552ccdbe099ce4f847bae8bd2a89be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LogManager
+  uiDoc: {fileID: 222187262}
 --- !u!1 &867040294
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +537,7 @@ GameObject:
   - component: {fileID: 946725893}
   - component: {fileID: 946725892}
   - component: {fileID: 946725894}
+  - component: {fileID: 946725895}
   m_Layer: 0
   m_Name: CoreManagers
   m_TagString: Untagged
@@ -580,6 +609,19 @@ MonoBehaviour:
   FaultType: 
   HealthScore: 0
   HealthStatus: 
+--- !u!114 &946725895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946725890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3dc17ac87aebe249aa0caba27de2c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneStateManager
+  returnScreen: MachineDetails
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

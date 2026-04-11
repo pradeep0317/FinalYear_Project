@@ -5,15 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Uzumaki_AR/Scenes/UIScene.unity
-    guid: 6073c96b6224b0846a35d9e483fc7488
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Uzumaki_AR/Scenes/UIMainScreen.unity
+    guid: 0a703611b5678b4438e0b99dfaac8d06
+  - enabled: 1
     path: Assets/Uzumaki_AR/Scenes/ImageTargetScene.unity
     guid: fefc0ae86911c154da195a540721198c
-  - enabled: 1
-    path: Assets/Uzumaki_AR/Scenes/ARCoreScene.unity
-    guid: 6cd1072352a2ac048a8d0d55e8cb670c
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8623b2cf5774ebd489720cee61f7826d, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
