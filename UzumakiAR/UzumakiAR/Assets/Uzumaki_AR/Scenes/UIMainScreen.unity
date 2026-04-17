@@ -339,6 +339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LogManager
   uiDoc: {fileID: 222187262}
+  logInterval: 120
+  maxLogs: 50
 --- !u!1 &867040294
 GameObject:
   m_ObjectHideFlags: 0

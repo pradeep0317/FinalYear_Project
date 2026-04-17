@@ -19,7 +19,7 @@ public class UIScreenController : MonoBehaviour
     {
         root = uiDocument.rootVisualElement;
 
-        // 🔥 Register all screens
+        //  Register all screens
         screens = new Dictionary<string, VisualElement>()
         {
             {"HomeScreen", root.Q<VisualElement>("HomeScreen")},
@@ -29,7 +29,7 @@ public class UIScreenController : MonoBehaviour
             {"AnalyticsUI", root.Q<VisualElement>("AnalyticsUI")}
         };
 
-        // 🔥 Default screen
+        //  Default screen
         ShowScreen("HomeScreen", false);
 
         RegisterButtons();
@@ -50,25 +50,25 @@ public class UIScreenController : MonoBehaviour
 
     void RegisterButtons()
     {
-        // 🔥 Home → Machine List
+        //  Home → Machine List
         root.Q<Button>("ViewMachineButton").clicked += () =>
         {
             ShowScreen("MachineListUI");
         };
 
-        // 🔥 Machine List → Details
+        //  Machine List → Details
         root.Q<Button>("MachineImageButton").clicked += () =>
         {
             ShowScreen("MachineDetails");
         };
 
-        // 🔥 Details → Log
+        //  Details → Log
         root.Q<Button>("LogButton").clicked += () =>
         {
             ShowScreen("LogUI");
         };
 
-        // 🔥 Details → Analytics
+        //  Details → Analytics
         root.Q<Button>("AnalyticsButton").clicked += () =>
         {
             ShowScreen("AnalyticsUI");
@@ -79,21 +79,21 @@ public class UIScreenController : MonoBehaviour
 
         };
 
-        // 🔥 Details → Live Data Scene
+        //  Details → Live Data Scene
         root.Q<Button>("LIveDataViewButton").clicked += () =>
         {
             SceneStateManager.Instance.returnScreen = "MachineDetails";
             SceneManager.LoadScene("ImageTargetScene");
         };
 
-        // 🔥 Back Buttons (Common)
+        //  Back Buttons (Common)
         foreach (var btn in root.Query<Button>("BackButton").ToList())
         {
             btn.clicked += GoBack;
         }
     }
 
-    // 🔥 Show Screen
+    //  Show Screen
     public void ShowScreen(string screenName, bool addToHistory = true)
     {
         foreach (var screen in screens.Values)
@@ -138,7 +138,7 @@ public class UIScreenController : MonoBehaviour
         }
     }
 
-    // 🔥 Back Logic
+    //  Back Logic
     public void GoBack()
     {
         if (screenHistory.Count > 1)
